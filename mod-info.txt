@@ -1,0 +1,10 @@
+[mod]
+title: General Airon's EEE (Alpha, #4)
+description: EEE: Electrics, Excavation, Exploration | Electrify your devices. Excavate for resources. Explore the landscape. | No, this is not Mindustry, but has some inspirations though.
+tags: units, wires, circuit, eee, eeeee, eeeeeeee, ores, tower defense, mining, electricity
+thumbnail: thumb.jpg
+
+minVersion: 1.15p10
+
+[music]
+sourceFolder: Misc/

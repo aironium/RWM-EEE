@@ -1,0 +1,64 @@
+[resource_current]
+displayName: Current
+
+[resource_data]
+displayName: Data
+
+
+[global_resource_deviceLife]
+hidden: true
+displayName: Device Activity Status
+
+[global_resource_metal]
+displayName: Metals
+iconImage: ROOT:UI/metal.png
+displayNameHideWhenIconShownInText: true
+displayNameHideWhenIconShownInHUD: true
+displayTextAppendResource: nonmetal
+displayWhenZero: true
+displayColor: #0184e3
+
+[global_resource_nonmetal]
+displayName: Non-Metals
+iconImage: ROOT:UI/nonmetal.png
+displayNameHideWhenIconShownInText: true
+displayNameHideWhenIconShownInHUD: true
+displayTextAppendResource: semiconductor 
+displayWhenZero: true
+displayColor: #e3873f
+hidden: true
+
+[global_resource_semiconductor]
+displayName: Semiconductors
+iconImage: ROOT:UI/semiconductor.png
+displayNameHideWhenIconShownInText: true
+displayNameHideWhenIconShownInHUD: true
+displayTextAppendResource: isotope
+displayWhenZero: true
+displayColor: #dddddd
+hidden: true
+
+
+
+[global_resource_isotope]
+displayName: Isotopes
+iconImage: ROOT:UI/isotope.png
+displayNameHideWhenIconShownInText: true
+displayNameHideWhenIconShownInHUD: true
+displayWhenZero: true
+displayColor: #00ff00
+hidden: true
+
+
+[resource_localIsotope]
+equivalentGlobalResourceForAI: isotope
+
+[resource_localMetal]
+equivalentGlobalResourceForAI: metal
+
+[resource_localNonmetal]
+equivalentGlobalResourceForAI: nonmetal
+
+[resource_localSemiconductor]
+equivalentGlobalResourceForAI: semiconductor
+

@@ -1,0 +1,78 @@
+[resource_current]
+displayName: Current
+
+[resource_overcharge]
+displayName: Overcharge
+
+[global_resource_deviceLife]
+hidden: true
+displayName: Device Activity Status
+
+[global_resource_metal]
+displayName: Metals
+iconImage: ROOT:UI/metal.png
+displayNameHideWhenIconShownInText: true
+displayNameHideWhenIconShownInHUD: true
+displayTextAppendResource: nonmetal
+displayWhenZero: true
+displayColor: #0184e3
+
+[global_resource_nonmetal]
+displayName: Non-Metals
+iconImage: ROOT:UI/nonmetal.png
+displayNameHideWhenIconShownInText: true
+displayNameHideWhenIconShownInHUD: true
+displayTextAppendResource: semiconductor 
+displayWhenZero: true
+displayColor: #e3873f
+hidden: true
+
+[global_resource_semiconductor]
+displayName: Semiconductors
+iconImage: ROOT:UI/semiconductor.png
+displayNameHideWhenIconShownInText: true
+displayNameHideWhenIconShownInHUD: true
+displayWhenZero: true
+displayColor: #dddddd
+hidden: true
+
+[resource_localMetal]
+equivalentGlobalResourceForAI: metal
+
+[resource_localNonmetal]
+equivalentGlobalResourceForAI: nonmetal
+
+[resource_localSemiconductor]
+equivalentGlobalResourceForAI: semiconductor
+
+[hiddenAction_addVehicleTag]
+autoTriggerOnEvent: created
+temporarilyAddTags: vehicle
+
+[hiddenAction_aiWaveATK]
+text: AI Wave ATK Test
+buildSpeed: 0
+addWaypoint_type: attack
+addWaypoint_prepend: false
+addWaypoint_target_randomUnit_team: enemy
+addWaypoint_target_randomUnit_maxRange: 5000
+addWaypoint_triggerActionIfFailed: aiWaveScout
+addWaypoint_target_randomUnit_tagged: mother
+addWaypoint_target_mapMustBeReachable: true
+clearAllWaypoints: true
+autoTrigger: if self.isControlledByAI() and not self.hasActiveWaypoint() and not self.tags(includes="buildUnit") and numberOfUnitsInTeam(withTag="sandbox", lessThan=1)
+addAllActionCooldownsTime: 30s
+resetCustomTimer: true
+isLocked: if  not self.customTimer(laterThanSeconds=50)
+
+[hiddenAction_aiWaveScout]
+text: AI Wave Scout Test
+buildSpeed: 0
+addWaypoint_type: attackMove
+addWaypoint_prepend: false
+addWaypoint_triggerActionIfFailed: aiWaveATK
+addWaypoint_position_randomOffsetFromSelf: 2000, 5
+2000
+clearAllWaypoints: true
+addWaypoint_target_mapMustBeReachable: true
+isActive: false

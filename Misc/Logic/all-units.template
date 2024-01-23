@@ -1,0 +1,54 @@
+[action_0]
+setBodyRotation: 0
+text: Left
+price: 0
+buildSpeed: 0
+
+[action_90]
+setBodyRotation: 90
+text: Down
+price: 0
+buildSpeed: 0
+
+[action_270]
+setBodyRotation: 270
+text: Up
+price: 0
+buildSpeed: 0
+
+[action_180]
+setBodyRotation: 180
+text: Right
+price: 0
+buildSpeed: 0
+
+
+[resource_current]
+displayName: Current
+
+[resource_data]
+displayName: Data
+
+[global_resource_metal]
+displayName: Metals
+
+[global_resource_deviceLife]
+hidden: true
+displayName: Device Activity Status
+
+
+[global_resource_nonmetal]
+displayName: Non-Metals
+
+[global_resource_semiconductor]
+displayName: Semiconductors
+
+[resource_localMetal]
+equivalentGlobalResourceForAI: metal
+
+[resource_localNonmetal]
+equivalentGlobalResourceForAI: nonmetal
+
+[resource_localSemiconductor]
+equivalentGlobalResourceForAI: semiconductor
+

@@ -1,0 +1,17 @@
+[core]
+@memory mainTeam:number
+
+[hiddenAction_rememberTeam]
+autoTriggerOnEvent: created
+setUnitMemory: mainTeam=self.teamId()
+
+[resource_domination]
+displayName: Dominubrum Control
+
+[action_isControlled]
+text: Dominated 
+description: Under control by the Dominubrum
+isAlsoViewableByEnemies: true
+isLocked: true
+pos: -9999
+isVisible: if self.resource.domination > 0

@@ -1,0 +1,60 @@
+
+[hiddenAction_toNtNormal]
+autoTrigger: if self.hasParent(withTag="belt") and not self.hasFlag(id=1)
+addResources: setFlag=1
+disconnectFromParent: true
+
+[hiddenAction_toNormal]
+autoTrigger: if numberOfUnitsInTeam(withTag="belt", lessThan=1, withinRange=30) and self.hasFlag(id=1)
+addResources: unsetFlag=1
+
+
+[hiddenAction_moveUp]
+autoTrigger: if numberOfUnitsInTeam(withTag='rail_N', withinRange=40, greaterThan=0) and self.hasFlag(id=1) and numberOfUnitsInTeam(withTag="rail_Off", withinRange=40, lessThan=1)
+clearActiveWaypoint: true
+text: Up
+description: Move up
+addWaypoint_type: move
+addWaypoint_position_offsetFromSelf: 0, -30
+price: 0
+buildSpeed: 0
+addWaypoint_prepend: true
+disconnectFromParent: true
+
+[hiddenAction_moveDown]
+autoTrigger: if numberOfUnitsInTeam(withTag='rail_S', withinRange=40, greaterThan=0) and self.hasFlag(id=1) and numberOfUnitsInTeam(withTag="rail_Off", withinRange=40, lessThan=1)
+text: Down
+description: Move Down
+addWaypoint_type: move
+addWaypoint_position_offsetFromSelf: 0, 30
+price: 0
+buildSpeed: 0
+clearActiveWaypoint: true
+addWaypoint_prepend: true
+disconnectFromParent: true
+
+
+[hiddenAction_moveLeft]
+autoTrigger: if numberOfUnitsInTeam(withTag='rail_W', withinRange=40, greaterThan=0) and self.hasFlag(id=1) and numberOfUnitsInTeam(withTag="rail_Off", withinRange=40, lessThan=1)
+text: Left
+description: Move left
+addWaypoint_type: move
+addWaypoint_position_offsetFromSelf: -30, 0
+price: 0
+buildSpeed: 0
+clearActiveWaypoint: true
+addWaypoint_prepend: true
+disconnectFromParent: true
+
+
+[hiddenAction_moveRight]
+autoTrigger: if numberOfUnitsInTeam(withTag='rail_E', withinRange=40, greaterThan=0) and self.hasFlag(id=1) and numberOfUnitsInTeam(withTag="rail_Off", withinRange=40, lessThan=1)
+text: Right
+description: Move up
+addWaypoint_type: move
+addWaypoint_position_offsetFromSelf: 30, 0
+price: 0
+buildSpeed: 0
+clearActiveWaypoint: true
+addWaypoint_prepend: true
+disconnectFromParent: true
